@@ -4,6 +4,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
 }
 
-export const Button: FunctionComponent<ButtonProps> = ({ text, ...props }) => {
-  return <button {...props}>{text} button</button>;
+export const Button: FunctionComponent<ButtonProps> = ({
+  children,
+  text,
+  ...props
+}) => {
+  return (
+    <button {...props}>
+      {text} - {children}
+    </button>
+  );
 };
