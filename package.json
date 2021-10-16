@@ -1,6 +1,6 @@
 {
   "name": "@lctoan/react-component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "This is a component library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
