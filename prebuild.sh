@@ -3,6 +3,7 @@
 clear
 
 RED='\033[0;31m'
+GREEN='\033[0;32m'
 NC='\033[0m'
 path="./src/components"
 index="./src/index.ts"
@@ -27,13 +28,13 @@ do
     result="${component} is exported "
     width=$((cols - ${#result} - 3))
     repeat_chracter width "-"
-    echo $result $prepends 👌
+    echo -e "$result${GREEN}$prepends${NC} 👌"
   else
     result="${component} is not exported "
     width=$((cols - ${#result} - 3))
     repeat_chracter width "-"
     errors=$((errors + 1))
-    echo $result $prepends 💀
+    echo -e "$result${RED}$prepends${NC} 💀"
   fi
 done
 
