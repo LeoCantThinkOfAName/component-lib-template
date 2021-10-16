@@ -19,7 +19,7 @@ function repeat_chracter () {
 }
 
 repeat_chracter cols "="
-echo -e "$prepends\nChecking components...\n$prepends\n"
+echo -e "$prepends\nChecking exports...\n$prepends\n"
 
 for f in $path/*
 do
