@@ -10,7 +10,7 @@ index="./src/index.ts"
 cols=$(tput cols)
 errors=0
 
-function repeat_chracter () {
+function repeat_chracter {
   prepends=""
   for ((n=0;n<$1;n++))
   do
