@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, FunctionComponent } from "react";
+import React, { ButtonHTMLAttributes, FunctionComponent } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
