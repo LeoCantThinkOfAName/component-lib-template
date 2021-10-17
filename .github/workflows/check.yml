@@ -19,5 +19,8 @@ jobs:
       - name: Install Node.js dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Lint
+        run: yarn github-action-eslint
+
       - name: Check components
         run: yarn build
