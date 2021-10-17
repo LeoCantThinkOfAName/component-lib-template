@@ -1,14 +1,5 @@
 #!/bin/bash
-
-clear
-
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-NC='\033[0m'
 path="./src/components"
-index="./src/index.ts"
-cols=$(tput cols)
-errors=0
 
 if [ CI = true ]; then
   for f in $path/*
@@ -21,6 +12,15 @@ if [ CI = true ]; then
       fi
   done
 else
+  clear
+
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  NC='\033[0m'
+  index="./src/index.ts"
+  cols=$(tput cols)
+  errors=0
+
   function repeat_chracter {
     prepends=""
     for ((n=0;n<$1;n++))
