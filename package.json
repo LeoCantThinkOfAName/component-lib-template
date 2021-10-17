@@ -39,7 +39,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint **/*.tsx --fix",
-    "github-action-eslint": "tsc -p tsconfig.json && yarn eslint --max-warnings=0 --ext .ts,.tsx src -c .eslintrc.js",
+    "eslint": "eslint --max-warnings=0 --ext .ts,.tsx src -c .eslintrc.js",
+    "ts": "tsc -p tsconfig.json",
+    "github-action-eslint": "yarn ts && yarn eslint",
     "build": "yarn lint \n sh ./build.sh"
   },
   "eslintConfig": {

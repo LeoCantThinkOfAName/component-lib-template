@@ -9,7 +9,7 @@ module.exports = {
   ],
   rules: {
     'no-console': 'warn',
-    indent: ['warn', 2],
+    indent: ['warn', 2, { SwitchCase: 1 }],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
     'comma-dangle': ['warn', 'always-multiline'],
