@@ -1,7 +1,8 @@
 name: Pull requests checking
 
 on: [pull_request]
-
+env:
+  CI: true
 jobs:
   check-lint:
     runs-on: ubuntu-latest
