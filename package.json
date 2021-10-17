@@ -38,8 +38,9 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "sh ./build.sh",
-    "github-action-eslint": "tsc -p tsconfig.json && yarn eslint --max-warnings=0 --ext .ts,.tsx src -c .eslintrc.js"
+    "lint": "eslint **/*.tsx --fix",
+    "github-action-eslint": "tsc -p tsconfig.json && yarn eslint --max-warnings=0 --ext .ts,.tsx src -c .eslintrc.js",
+    "build": "yarn lint \n sh ./build.sh"
   },
   "eslintConfig": {
     "extends": [
