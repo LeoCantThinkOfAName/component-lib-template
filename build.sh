@@ -43,5 +43,5 @@ if [ $errors -ne 0 ]; then
   exit 1
 else
   # Start building process
-  yarn && yarn rollup -c
+  yarn rollup -c
 fi
