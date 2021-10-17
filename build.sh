@@ -42,7 +42,7 @@ if [ $errors -ne 0 ]; then
   repeat_chracter cols "="
   echo -e "\n$prepends"
   echo -e "You have ${RED}$errors${NC} component(s) not exported."
-  exit
+  exit 1
 else
   clear
   # Start building process
