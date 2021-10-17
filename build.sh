@@ -23,13 +23,13 @@ else
 
   function repeat_chracter {
     prepends=""
-    for ((n = 0; n < $1; n++))
+    for n in `seq $1`
     do
       prepends+=$2
     done
   }
 
-  repeat_chracter cols "="
+  repeat_chracter $cols "="
   echo -e "$prepends\nChecking exports...\n$prepends\n"
 
   for f in $path/*
@@ -38,19 +38,19 @@ else
     if grep -q $component "$index"; then
       result="${component} is exported "
       width=$((cols - ${#result} - 3))
-      repeat_chracter width "-"
+      repeat_chracter $width "-"
       echo -e "$result${GREEN}$prepends${NC} 👌"
     else
       result="${component} is not exported "
       width=$((cols - ${#result} - 3))
-      repeat_chracter width "-"
+      repeat_chracter $width "-"
       errors=$((errors + 1))
       echo -e "$result${RED}$prepends${NC} 💀"
     fi
   done
 
   if [ $errors -ne 0 ]; then
-    repeat_chracter cols "="
+    repeat_chracter $cols "="
     echo -e "\n$prepends"
     echo -e "You have ${RED}$errors${NC} component(s) not exported."
     exit 1
