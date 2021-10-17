@@ -21,7 +21,7 @@ else
   cols=$(tput cols)
   errors=0
 
-  function repeat_chracter {
+  repeat_chracter() {
     prepends=""
     for n in `seq $1`
     do
